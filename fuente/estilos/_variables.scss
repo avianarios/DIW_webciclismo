@@ -1,0 +1,40 @@
+/*$color_fondo2: #DDDCD9;
+$color_fondo: #ffffff;
+$color_texto: #2D455D;
+$color_destacado: #678DBA;
+$color_cabecera:#A0957B;*/
+
+$fuenteNormal: 'Sniglet', cursive;
+$fuenteTitulo: 'Raleway', sans-serif;
+
+/*$paleta1: (
+    $color_fondo: #ffffff,
+    $color_texto: #52a9ff,
+    $color_destacado: #ff796a,
+    $color_texto_cabecera: #52a9ff
+); 
+
+$paleta2: (
+    $color_fondo: #DDDCD9,
+    $color_texto: #678dba,
+    $color_destacado: #2d455d
+);*/ 
+
+/* fondo, texto,texto destacado, destacado, contraste*/
+$paleta1: (#ffffff,#52a9ff,#045f90,#2d455d, #ff796a);
+$paleta2: (#b6c28e,#61a3cf,#025585,#5b604b, #5b604b);
+$paleta3: (#FAF5F0,#73add4,#024064,#2d455d, #9c7650);
+
+
+$paleta_actual : $paleta3;
+
+$color_fondo: nth($paleta_actual, 1);
+$color_texto: nth($paleta_actual, 2);
+$color_texto_destacado: nth($paleta_actual, 3);
+$color_destacado: nth($paleta_actual, 4);
+$color_contraste: nth($paleta_actual, 5);
+
+//$tamanyo_texto_base: 16px;
+$tamanyo_texto_pequenyo: 0.75rem;
+$tamanyo_texto_menu: 1.25rem;
+$tamanyo_texto_destacado: 2.25rem;

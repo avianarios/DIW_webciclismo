@@ -1,0 +1,126 @@
+html{
+    @include mixin_media_query(max, pequeño) {
+        font-size: 14px;
+    }
+
+    @include mixin_media_query(min, pequeño) {
+        font-size: 16px;
+    }
+
+    @include mixin_media_query(min, mediano) {
+        font-size: 18px;
+    }
+}
+
+/*html{
+    font-size: $tamanyo_texto_base;
+}*/
+
+p{
+    text-align: center;
+}
+body{
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    max-width: 2000px;
+    background-color: $color_fondo;
+    font-family: $fuenteNormal;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    & > ul{
+        gap: 10px;
+        list-style: none;
+    }
+    
+    a{
+        text-decoration: none;
+        color: $color_texto_destacado;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $color_texto_destacado;
+}
+
+
+
+$boton: (
+  cabecera: ($color_contraste, #fff, $tamanyo_texto_menu),
+  imagen: (transparent, #fff, $tamanyo_texto_destacado),
+); 
+.boton {
+    text-align: center;
+    border-radius: 6px;
+    border:1px solid;
+
+    @each $nombre, $caracteristicas in $boton {
+      $color_relleno: nth($caracteristicas, 1);
+      $color_texto: nth($caracteristicas, 2);
+      $tamanyo: nth($caracteristicas, 3);
+      &--#{$nombre} {
+        background-color: $color_relleno;
+        border-color: $color_texto;
+        color: $color_texto;
+        font-size: $tamanyo;
+      }  
+    }
+  }
+
+.menu{
+  background-color: $color_fondo;
+  padding: 5px 15px 0 5px;
+}
+
+.item{
+    width: 100%;
+}
+
+.imagen_portada_activa{
+    opacity: 0.2;
+}
+
+#cuerpo {
+    height: 100vh;
+}
+
+//Alternativa a picture: dejar el contenedor vacío y colocarle una imagen de fondo
+/*No se puede cargar las imágenes como fondo de un contenedor porque sólo son visibles donde hay contenido dentro de dicho contenedor. Por eso se hace de la rejilla completa, que tiene dos filas*/
+main{
+    background: url("../img/descenso_btt-500px.webp") no-repeat center top;
+
+    @include mixin_media_query(min, pequeño) {
+        background: url("../img/descenso_btt-800px.webp") no-repeat center top;
+    }
+
+    @include mixin_media_query(min, mediano) {
+        background: url("../img/descenso_btt-1500px.webp") no-repeat center top;
+    }
+
+    @include mixin_media_query(min, grande) {
+        background: url("../img/descenso_btt-2000px.webp") no-repeat center top;
+    }
+}
+
+
+/*El siguiente código es si se usa picture en vez de background-image
+hay que aplicárselo a img. Si se hace a una clase o a picture, NO FUNCIONA*/
+/*.imagen_portada{
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 67px;
+    z-index: -1;
+}*/
+
+.pie{
+    font-size: $tamanyo_texto_pequenyo;
+}

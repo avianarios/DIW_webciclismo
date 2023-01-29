@@ -1,0 +1,14 @@
+@use "sass:map";
+$puntos-ruptura: (
+  pequeño: 500px,
+  mediano: 800px,
+  grande: 1500px,
+);
+
+@mixin mixin_media_query($tipo: min, $tamanyo) {
+    $size: map.get($puntos-ruptura, $tamanyo);
+  
+    @media only screen and (#{$tipo}-width: $size) {
+      @content;
+    }
+}

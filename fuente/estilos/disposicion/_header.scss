@@ -1,0 +1,35 @@
+.logo{
+    flex:1;
+    order: 0;
+}
+
+.menu{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    text-align: center;
+    display: none;
+
+    @include mixin_media_query(min, pequeño) {
+        display: inline;
+        flex:0;
+    }
+}  
+
+.icono_menu{
+    order: 1;
+    @include mixin_media_query(min, pequeño){
+        display:none;
+    }
+}
+
+.active .item {
+    display: block;
+    order:2;
+}
+
+

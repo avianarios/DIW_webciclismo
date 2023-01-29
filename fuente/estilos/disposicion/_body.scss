@@ -1,0 +1,9 @@
+body{
+/*    display: flex;
+    flex-direction: column;*/
+    display: grid;
+    /*Creo una rejilla de 1 columna y 3 filas. Dentro de esa rejilla, crearé otra rejilla*/
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'cabecera' 'principal' 'pie';
+}

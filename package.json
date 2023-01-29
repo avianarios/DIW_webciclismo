@@ -1,0 +1,25 @@
+{
+  "name": "elrepecho",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "version": "1.0.0",
+  "description": "Web ciclista",
+  "scripts": {
+    "parcel:des": "parcel fuente/index.html",
+    "parcel:prod": "parcel build fuente/index.html",
+    "limpia": "rimraf dist .cache .cache-loader",
+    "des": "npm-run-all limpia parcel:des",
+    "prod": "npm-run-all limpia parcel:prod"
+  },
+  "author": "Alejandro Viana Ríos",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "parcel-plugin-imagemin": "^4.0.2",
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "remixicon": "^2.5.0"
+  }
+}
