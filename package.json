@@ -10,8 +10,16 @@
     "des": "npm-run-all limpia parcel:des",
     "prod": "npm-run-all limpia parcel:prod"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avianarios/webciclismo.git"
+  },
   "author": "Alejandro Viana Ríos",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avianarios/webciclismo/issues"
+  },
+  "homepage": "https://github.com/avianarios/webciclismo#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3",
