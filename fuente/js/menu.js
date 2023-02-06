@@ -8,10 +8,12 @@ Esta función hace que si la lista ul que forma el menú no tiene la clase "acti
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+/*    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";*/
+    toggle.querySelector("a").innerHTML = "<i class='ri-menu-line'></i>";
   } else {
     menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+/*    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";*/
+    toggle.querySelector("a").innerHTML = "<i class='ri-close-line'></i>";
   }
 }
 
