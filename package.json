@@ -6,7 +6,7 @@
   "scripts": {
     "parcel:des": "parcel fuente/index.html",
     "parcel:prod": "parcel build fuente/index.html --public-url './' --dist-dir 'produccion'",
-    "limpia": "rimraf produccion .cache .cache-loader",
+    "limpia": "rimraf dist .cache .cache-loader",
     "des": "npm-run-all limpia parcel:des",
     "prod": "npm-run-all limpia parcel:prod"
   },
